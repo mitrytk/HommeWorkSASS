@@ -2,3 +2,59 @@ body {
   padding: 0;
   margin: 0;
 }
+
+p {
+  margin: 0;
+}
+
+header .container {
+  padding-top: 112px;
+}
+
+header .container .subtitle {
+  margin-bottom: 19px;
+  font-size: 18px;
+  letter-spacing: 0px;
+  line-height: 14px;
+  color: #898f8f;
+  font-weight: 500;
+  font-family: "Raleway";
+  text-align: center;
+}
+
+header .container .title {
+  font-size: 60px;
+  line-height: 45px;
+  color: #ffcc00;
+  font-family: "Roboto-Bold";
+  text-align: center;
+}
+
+header .container .fire-icon {
+  margin-top: 44px;
+  font-size: 20px;
+  letter-spacing: 0px;
+  line-height: 20px;
+  color: #ffcc00;
+  font-family: "Ionicons";
+  text-align: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+header .container .fire-icon::before, header .container .fire-icon::after {
+  content: "";
+  position: absolute;
+  margin-top: 9px;
+  background: #ffcc00;
+  width: 210px;
+  height: 1px;
+}
+
+header .container .fire-icon::before {
+  left: calc(50% + 15px);
+}
+
+header .container .fire-icon::after {
+  right: calc(50% + 15px);
+}
