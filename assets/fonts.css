@@ -8,6 +8,39 @@
 }
 
 @font-face {
+	font-family: 'Raleway-Medium';
+	src: url('..fonts/Raleway-Medium.eot');
+	src: local('☺'), url('..fonts/Raleway-Medium.woff') format('woff'), url('..fonts/Raleway-Medium.ttf') format('truetype'), url('..fonts/Raleway-Medium.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Raleway_Regular';
+	src: url('../fonts/ofont.ru_Raleway.eot');
+	src: local('☺'), url('../fonts/ofont.ru_Raleway.woff') format('woff'), url('../fonts/ofont.ru_Raleway.ttf') format('truetype'), url('../fonts/ofont.ru_Raleway.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Font_Awesome';
+	src: url('../fonts/fa-regular-400.eot');
+	src: local('☺'), url('../fonts/fa-regular-400.woff') format('woff'), url('../fonts/fa-regular-400.ttf') format('truetype'), url('../fonts/fa-regular-400.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'OpenSans-Bold';
+	src: url('../fonts/OpenSans-Bold.eot');
+	src: local('☺'), url('../fonts/OpenSans-Bold.woff') format('woff'), url('../fonts/OpenSans-Bold.ttf') format('truetype'), url('../fonts/OpenSans-Bold.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+@font-face {
 	font-family: "Ionicons";
 	src: url("../fonts/ionicons.eot?v=2.0.0");
 	src: url("../fonts/ionicons.eot?v=2.0.0#iefix") format("embedded-opentype"), url("../fonts/ionicons.ttf?v=2.0.0") format("truetype"), url("../fonts/ionicons.woff?v=2.0.0") format("woff"), url("../fonts/ionicons.svg?v=2.0.0#Ionicons") format("svg");

@@ -7,27 +7,32 @@ p {
     margin: 0;
 }
 
+a {
+    text-decoration: none;
+}
+
 $color-Gold: #ffcc00;
 $color-Title: #666666;
 $color-text: #333333;
+$color-SocialLogo: #cccccc;
 
-header {
+.header {
     .container {
         padding-top: 112px;
 
-        .subtitle {
+        &__subtitle {
             margin-bottom: 19px;
 
             font-size: 18px;
-            letter-spacing: 0px;
+            letter-spacing: 0.4px;
             line-height: 14px;
             color: #898f8f;
             font-weight: 500;
-            font-family: "Raleway";
+            font-family: "Raleway_Regular";
             text-align: center;
         }
 
-        .title {
+        &__title {
             font-size: 60px;
             line-height: 45px;
             color: $color-Gold;
@@ -35,7 +40,7 @@ header {
             text-align: center;
         }
 
-        .fire-icon {
+        &__fire-icon {
             margin-top: 44px;
             font-size: 20px;
             letter-spacing: 0px;
@@ -65,4 +70,151 @@ header {
         }
     }
 
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+
+    .container {
+        margin: 0 auto;
+        margin-top: 38px;
+        width: 1170px;
+        height: 568px;
+
+        display: flex;
+
+        &::before {
+            content: "";
+            position: absolute;
+            width: 1px;
+            height: 561px;
+            background-color: $color-Gold;
+            right: 50%;
+        }
+
+        .block-avatar {
+            flex: 50%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+
+            &__border {
+                flex-direction: row;
+                justify-content: center;
+                width: 416px;
+                height: 416px;
+                box-sizing: border-box;
+                box-shadow: 160px 160px 0px -159px $color-Gold, 160px -160px 0px -159px $color-Gold, -160px 160px 0px -159px $color-Gold, -160px -160px 0px -159px $color-Gold;
+
+                .avatar_1 {
+                    max-width: 386px;
+                    max-height: 386px;
+                    margin: 3.32%;
+                    border: 1px solid $color-Gold;
+                }
+            }
+        }
+
+        .block-info {
+            flex: 50%;
+
+            .conteiner-info {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin-top: 98px;
+
+                &__name {
+                    font-size: 36px;
+                    letter-spacing: 1px;
+                    line-height: 24px;
+                    color: $color-Title;
+                    font-family: "Roboto-Bold";
+                    text-align: center;
+                }
+
+                &__profession {
+                    margin-top: 34px;
+                    font-size: 24px;
+                    line-height: 36px;
+                    color: $color-Title;
+                    font-weight: 400;
+                    font-family: "Raleway";
+                    text-align: center;
+
+                    &::before {
+                        content: "";
+                        display: block;
+                        margin: 0 auto;
+                        margin-bottom: 25px;
+
+                        width: 101px;
+                        height: 1px;
+                        background-color: $color-Gold;
+
+                    }
+                }
+
+                .conteiner-social {
+                    display: flex;
+                    margin-top: 22px;
+                    font-family: "Ionicons";
+                    font-size: 14px;
+                    line-height: 26px;
+                    text-align: center;
+                    justify-content: center;
+
+                    a {
+                        display: block;
+                        width: 30px;
+                        height: 30px;
+                        margin: 2.5px;
+                        border: 2px solid $color-SocialLogo;
+                        border-radius: 50%;
+                        box-sizing: border-box;
+                        color: $color-SocialLogo;
+                    }
+
+                    .linkedin {
+                        font-family: "Font_Awesome";
+                        text-align: center;
+                    }
+                }
+
+                &__characteristic {
+                    margin-top: 23px;
+                    width: 420px;
+                    height: 121px;
+                    font-size: 14px;
+                    line-height: 24px;
+                    letter-spacing: 0.2px;
+                    color: $color-text;
+                    font-family: "Raleway";
+                    text-align: center;
+                }
+
+                .decor-line {}
+
+                &__view-buttom {
+                    display: block;
+                    margin-top: 45px;
+                    width: 118px;
+                    height: 22px;
+                    border: 1px solid $color-Gold;
+                    justify-content: center;
+
+                    text-transform: uppercase;
+                    text-align: center;
+                    font-size: 14px;
+                    line-height: 24px;
+                    color: $color-Title;
+                    font-weight: 700;
+                    font-family: "OpenSans-Bold";
+                }
+            }
+        }
+    }
 }

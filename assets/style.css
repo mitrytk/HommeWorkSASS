@@ -7,22 +7,26 @@ p {
   margin: 0;
 }
 
-header .container {
+a {
+  text-decoration: none;
+}
+
+.header .container {
   padding-top: 112px;
 }
 
-header .container .subtitle {
+.header .container__subtitle {
   margin-bottom: 19px;
   font-size: 18px;
-  letter-spacing: 0px;
+  letter-spacing: 0.4px;
   line-height: 14px;
   color: #898f8f;
   font-weight: 500;
-  font-family: "Raleway";
+  font-family: "Raleway_Regular";
   text-align: center;
 }
 
-header .container .title {
+.header .container__title {
   font-size: 60px;
   line-height: 45px;
   color: #ffcc00;
@@ -30,7 +34,7 @@ header .container .title {
   text-align: center;
 }
 
-header .container .fire-icon {
+.header .container__fire-icon {
   margin-top: 44px;
   font-size: 20px;
   letter-spacing: 0px;
@@ -42,7 +46,7 @@ header .container .fire-icon {
           box-sizing: border-box;
 }
 
-header .container .fire-icon::before, header .container .fire-icon::after {
+.header .container__fire-icon::before, .header .container__fire-icon::after {
   content: "";
   position: absolute;
   margin-top: 9px;
@@ -51,10 +55,193 @@ header .container .fire-icon::before, header .container .fire-icon::after {
   height: 1px;
 }
 
-header .container .fire-icon::before {
+.header .container__fire-icon::before {
   left: calc(50% + 15px);
 }
 
-header .container .fire-icon::after {
+.header .container__fire-icon::after {
   right: calc(50% + 15px);
+}
+
+.main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.main .container {
+  margin: 0 auto;
+  margin-top: 38px;
+  width: 1170px;
+  height: 568px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.main .container::before {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 561px;
+  background-color: #ffcc00;
+  right: 50%;
+}
+
+.main .container .block-avatar {
+  -webkit-box-flex: 50%;
+      -ms-flex: 50%;
+          flex: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.main .container .block-avatar__border {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 416px;
+  height: 416px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-shadow: 160px 160px 0px -159px #ffcc00, 160px -160px 0px -159px #ffcc00, -160px 160px 0px -159px #ffcc00, -160px -160px 0px -159px #ffcc00;
+          box-shadow: 160px 160px 0px -159px #ffcc00, 160px -160px 0px -159px #ffcc00, -160px 160px 0px -159px #ffcc00, -160px -160px 0px -159px #ffcc00;
+}
+
+.main .container .block-avatar__border .avatar_1 {
+  max-width: 386px;
+  max-height: 386px;
+  margin: 3.32%;
+  border: 1px solid #ffcc00;
+}
+
+.main .container .block-info {
+  -webkit-box-flex: 50%;
+      -ms-flex: 50%;
+          flex: 50%;
+}
+
+.main .container .block-info .conteiner-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 98px;
+}
+
+.main .container .block-info .conteiner-info__name {
+  font-size: 36px;
+  letter-spacing: 1px;
+  line-height: 24px;
+  color: #666666;
+  font-family: "Roboto-Bold";
+  text-align: center;
+}
+
+.main .container .block-info .conteiner-info__profession {
+  margin-top: 34px;
+  font-size: 24px;
+  line-height: 36px;
+  color: #666666;
+  font-weight: 400;
+  font-family: "Raleway";
+  text-align: center;
+}
+
+.main .container .block-info .conteiner-info__profession::before {
+  content: "";
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 25px;
+  width: 101px;
+  height: 1px;
+  background-color: #ffcc00;
+}
+
+.main .container .block-info .conteiner-info .conteiner-social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 22px;
+  font-family: "Ionicons";
+  font-size: 14px;
+  line-height: 26px;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.main .container .block-info .conteiner-info .conteiner-social a {
+  display: block;
+  width: 30px;
+  height: 30px;
+  margin: 2.5px;
+  border: 2px solid #cccccc;
+  border-radius: 50%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: #cccccc;
+}
+
+.main .container .block-info .conteiner-info .conteiner-social .linkedin {
+  font-family: "Font_Awesome";
+  text-align: center;
+}
+
+.main .container .block-info .conteiner-info__characteristic {
+  margin-top: 23px;
+  width: 420px;
+  height: 121px;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.2px;
+  color: #333333;
+  font-family: "Raleway";
+  text-align: center;
+}
+
+.main .container .block-info .conteiner-info__view-buttom {
+  display: block;
+  margin-top: 45px;
+  width: 118px;
+  height: 22px;
+  border: 1px solid #ffcc00;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 14px;
+  line-height: 24px;
+  color: #666666;
+  font-weight: 700;
+  font-family: "OpenSans-Bold";
 }
