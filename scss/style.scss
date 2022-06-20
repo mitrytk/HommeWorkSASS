@@ -73,8 +73,7 @@ $color-SocialLogo: #cccccc;
 }
 
 .main {
-    display: flex;
-    justify-content: center;
+
 
     .container {
         margin: 0 auto;
@@ -83,6 +82,44 @@ $color-SocialLogo: #cccccc;
         height: 568px;
 
         display: flex;
+
+        .nav-arrow-Left,
+        .nav-arrow-Rigcht {
+            border: 0;
+            background: 0;
+            margin: auto 0;
+            margin-right: -70px;
+            margin-left: 10px;
+            width: 60px;
+            height: 60px;
+
+            &::before {
+                content: "";
+                position: absolute;
+                margin-left: -8px;
+                bottom: 52px;
+                border-top: 3px solid $color-Gold;
+                border-left: 3px solid $color-Gold;
+                width: 13px;
+                height: 13px;
+                transform: rotate(315deg);
+            }
+
+            &:hover &::before {
+                content: "";
+                transform: scale(1.05);
+            }
+        }
+
+        .nav-arrow-Rigcht {
+            margin-right: 0px;
+            margin-left: -60px;
+
+            &::before {
+                transform: rotate(136deg);
+                margin-left: -16px;
+            }
+        }
 
         &::before {
             content: "";
@@ -176,6 +213,11 @@ $color-SocialLogo: #cccccc;
                         border-radius: 50%;
                         box-sizing: border-box;
                         color: $color-SocialLogo;
+                        transition: 0.2s;
+
+                        &:hover {
+                            transform: scale(1.06);
+                        }
                     }
 
                     .linkedin {
@@ -196,11 +238,31 @@ $color-SocialLogo: #cccccc;
                     text-align: center;
                 }
 
-                .decor-line {}
+                .decor-line {
+                    margin-top: 15px;
+                    width: 20px;
+                    height: 4px;
+                    background: $color-Gold;
+
+                    &::before,
+                    &::after {
+                        content: "";
+                        display: block;
+                        background: $color-Gold;
+                        width: 10px;
+                        height: 4px;
+                        margin-left: -15px;
+                    }
+
+                    &::after {
+                        margin-top: -4px;
+                        margin-left: 25px;
+                    }
+                }
 
                 &__view-buttom {
                     display: block;
-                    margin-top: 45px;
+                    margin-top: 26px;
                     width: 118px;
                     height: 22px;
                     border: 1px solid $color-Gold;
@@ -209,12 +271,50 @@ $color-SocialLogo: #cccccc;
                     text-transform: uppercase;
                     text-align: center;
                     font-size: 14px;
-                    line-height: 24px;
+                    line-height: 22px;
                     color: $color-Title;
                     font-weight: 700;
                     font-family: "OpenSans-Bold";
+                    transition: 0.3s;
+
+                    &:hover {
+                        background: #FFD940;
+                        color: white;
+                        border-color: #FFD940;
+                        transform: scale(1.05);
+                    }
                 }
             }
         }
+    }
+
+    .nav-team {
+        display: flex;
+        justify-content: center;
+        margin-top: 28px;
+
+        &__button {
+            display: block;
+            padding: 4.8px;
+            margin: 4.5px;
+            margin-bottom: 40px;
+            border: 1px solid $color-Gold;
+            border-radius: 50%;
+            background-color: $color-Gold;
+
+            &:hover,
+            &:active {
+                background-color: white;
+            }
+        }
+    }
+
+    .nav-arrow {
+        border: 0;
+        background: 0;
+        border: 1px solid black;
+        margin-right: -60px;
+        margin-left: 10px;
+        width: 60px;
     }
 }
