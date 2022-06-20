@@ -96,16 +96,16 @@ a {
   height: 13px;
   -webkit-transform: rotate(315deg);
           transform: rotate(315deg);
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
 }
 
-.main .container .nav-arrow-Left:hover .main .container .nav-arrow-Left::before,
-.main .container .nav-arrow-Rigcht:hover .main .container .nav-arrow-Left::before, .main .container .nav-arrow-Left:hover
-.main .container .nav-arrow-Rigcht::before,
-.main .container .nav-arrow-Rigcht:hover
-.main .container .nav-arrow-Rigcht::before {
-  content: "";
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
+.main .container .nav-arrow-Left:hover:before,
+.main .container .nav-arrow-Rigcht:hover:before {
+  border-top: 4px solid #ffcc00;
+  border-left: 4px solid #ffcc00;
+  width: 14px;
+  height: 14px;
 }
 
 .main .container .nav-arrow-Rigcht {
@@ -246,13 +246,15 @@ a {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   color: #cccccc;
-  -webkit-transition: 0.2s;
-  transition: 0.2s;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .main .container .block-info .conteiner-info .conteiner-social a:hover {
-  -webkit-transform: scale(1.06);
-          transform: scale(1.06);
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  background-color: #cccccc;
+  color: white;
 }
 
 .main .container .block-info .conteiner-info .conteiner-social .linkedin {
@@ -343,13 +345,4 @@ a {
 
 .main .nav-team__button:hover, .main .nav-team__button:active {
   background-color: white;
-}
-
-.main .nav-arrow {
-  border: 0;
-  background: 0;
-  border: 1px solid black;
-  margin-right: -60px;
-  margin-left: 10px;
-  width: 60px;
 }
