@@ -17,6 +17,7 @@ $color-text: #333333;
 $color-SocialLogo: #cccccc;
 $color-backgraund: white;
 
+
 .header {
     .container {
         padding-top: 112px;
@@ -75,24 +76,89 @@ $color-backgraund: white;
 
 .main {
 
+    .control-form {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        margin-bottom: 40px;
 
-    .container {
-        margin: 0 auto;
-        margin-top: 38px;
-        width: 1170px;
-        height: 568px;
+        input[value="1"]:checked {
+            &~.container-main .container .person-1 {
+                transform: translateX(0%);
+            }
 
+            &~.container-main .container .person-2 {
+                transform: translate(100%, -100%);
+
+            }
+
+            &~.container-main .container .person-3 {
+                transform: translate(200%, -200%);
+            }
+        }
+
+        input[value="2"]:checked {
+            &~.container-main .container .person-1 {
+                transform: translateX(-100%);
+            }
+
+            &~.container-main .container .person-2 {
+                transform: translate(0%, -100%);
+            }
+
+            &~.container-main .container .person-3 {
+                transform: translate(100%, -200%);
+            }
+        }
+
+        input[value="3"]:checked {
+            &~.container-main .container .person-1 {
+                transform: translateX(-200%);
+            }
+
+            &~.container-main .container .person-2 {
+                transform: translate(-100%, -100%);
+            }
+
+            &~.container-main .container .person-3 {
+                transform: translate(0%, -200%);
+            }
+        }
+
+        input {
+            opacity: 1;
+            width: 11px;
+        }
+
+        .button-1 {
+            margin-left: -40px;
+            margin-top: -2px;
+        }
+
+        .button-2 {
+            margin-bottom: -11px;
+            margin-left: 1px;
+        }
+
+        .button-3 {
+            margin-left: 0;
+            margin-top: 32px;
+            margin-bottom: -16px;
+            margin-right: -40px;
+        }
+    }
+
+    .container-main {
         display: flex;
 
         .nav-arrow-Left,
         .nav-arrow-Rigcht {
             border: 0;
+            border: 1px solid black;
             background: none;
             margin: auto 0;
-            margin-right: -70px;
-            margin-left: 10px;
             width: 60px;
-            height: 200px;
+            height: 300px;
             border-radius: 50% 0 0 50%;
 
             &::before {
@@ -118,8 +184,6 @@ $color-backgraund: white;
         }
 
         .nav-arrow-Rigcht {
-            margin-right: 0px;
-            margin-left: -60px;
             border-radius: 0 50% 50% 0;
 
             &::before {
@@ -127,194 +191,208 @@ $color-backgraund: white;
             }
         }
 
-        &::before {
-            content: "";
-            position: absolute;
-            width: 1px;
-            height: 561px;
-            background-color: $color-Gold;
-            right: 50%;
-        }
+        .container {
+            margin-top: 38px;
+            width: 1005px;
+            height: 568px;
 
-        .block-avatar {
-            flex: 50%;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: center;
+            overflow: hidden;
 
-            &__border {
-                flex-direction: row;
-                justify-content: center;
-                width: 416px;
-                height: 416px;
-                box-sizing: border-box;
-                box-shadow: 160px 160px 0px -159px $color-Gold, 160px -160px 0px -159px $color-Gold, -160px 160px 0px -159px $color-Gold, -160px -160px 0px -159px $color-Gold;
-
-                .avatar_1 {
-                    max-width: 386px;
-                    max-height: 386px;
-                    margin: 3.32%;
-                    border: 1px solid $color-Gold;
-                }
-            }
-        }
-
-        .block-info {
-            flex: 50%;
-
-            .conteiner-info {
+            .person {
+                position: relative;
+                width: 100%;
+                height: 100%;
                 display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                margin-top: 98px;
+                transition: transform 0.3s linear;
 
-                &__name {
-                    font-size: 36px;
-                    letter-spacing: 1px;
-                    line-height: 24px;
-                    color: $color-Title;
-                    font-family: "Roboto-Bold";
-                    text-align: center;
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    width: 1px;
+                    height: 561px;
+                    background-color: $color-Gold;
+                    right: 50%;
                 }
 
-                &__profession {
-                    margin-top: 34px;
-                    font-size: 24px;
-                    line-height: 36px;
-                    color: $color-Title;
-                    font-weight: 400;
-                    font-family: "Raleway";
-                    text-align: center;
-
-                    &::before {
-                        content: "";
-                        display: block;
-                        margin: 0 auto;
-                        margin-bottom: 25px;
-
-                        width: 101px;
-                        height: 1px;
-                        background-color: $color-Gold;
-
-                    }
-                }
-
-                .conteiner-social {
+                .block-avatar {
+                    flex: 50%;
                     display: flex;
-                    margin-top: 22px;
-                    font-family: "Ionicons";
-                    font-size: 14px;
-                    line-height: 26px;
-                    text-align: center;
-                    justify-content: center;
+                    flex-direction: row;
+                    align-items: center;
 
-                    a {
-                        display: block;
-                        width: 30px;
-                        height: 30px;
-                        margin: 2.5px;
-                        border: 2px solid $color-SocialLogo;
-                        border-radius: 50%;
+                    &__border {
+                        flex-direction: row;
+                        justify-content: center;
+                        margin-left: 1px;
+                        width: 416px;
+                        height: 416px;
                         box-sizing: border-box;
-                        color: $color-SocialLogo;
-                        transition: 0.3s;
+                        box-shadow: 160px 160px 0px -159px $color-Gold, 160px -160px 0px -159px $color-Gold, -160px 160px 0px -159px $color-Gold, -160px -160px 0px -159px $color-Gold;
 
-                        &:hover {
-                            transform: scale(1.1);
-                            background-color: $color-SocialLogo;
-                            color: $color-backgraund;
+                        .avatar_1 {
+                            max-width: 386px;
+                            max-height: 386px;
+                            margin: 3.32%;
+                            border: 1px solid $color-Gold;
                         }
                     }
-
-                    .linkedin {
-                        font-family: "Font_Awesome";
-                        text-align: center;
-                    }
                 }
 
-                &__characteristic {
-                    margin-top: 23px;
-                    width: 420px;
-                    height: 121px;
-                    font-size: 14px;
-                    line-height: 24px;
-                    letter-spacing: 0.2px;
-                    color: $color-text;
-                    font-family: "Raleway";
-                    text-align: center;
-                }
+                .block-info {
+                    flex: 50%;
 
-                .decor-line {
-                    margin-top: 15px;
-                    width: 20px;
-                    height: 4px;
-                    background: $color-Gold;
+                    .conteiner-info {
+                        margin-left: 81px;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        margin-top: 98px;
 
-                    &::before,
-                    &::after {
-                        content: "";
-                        display: block;
-                        background: $color-Gold;
-                        width: 10px;
-                        height: 4px;
-                        margin-left: -15px;
-                    }
+                        &__name {
+                            font-size: 36px;
+                            letter-spacing: 1px;
+                            line-height: 24px;
+                            color: $color-Title;
+                            font-family: "Roboto-Bold";
+                            text-align: center;
+                        }
 
-                    &::after {
-                        margin-top: -4px;
-                        margin-left: 25px;
-                    }
-                }
+                        &__profession {
+                            margin-top: 34px;
+                            font-size: 24px;
+                            line-height: 36px;
+                            color: $color-Title;
+                            font-weight: 400;
+                            font-family: "Raleway";
+                            text-align: center;
 
-                &__view-buttom {
-                    display: block;
-                    margin-top: 26px;
-                    width: 118px;
-                    height: 22px;
-                    border: 1px solid $color-Gold;
-                    justify-content: center;
+                            &::before {
+                                content: "";
+                                display: block;
+                                margin: 0 auto;
+                                margin-bottom: 25px;
 
-                    text-transform: uppercase;
-                    text-align: center;
-                    font-size: 14px;
-                    line-height: 22px;
-                    color: $color-Title;
-                    font-weight: 700;
-                    font-family: "OpenSans-Bold";
-                    transition: 0.3s;
+                                width: 101px;
+                                height: 1px;
+                                background-color: $color-Gold;
 
-                    &:hover {
-                        background: #FFD940;
-                        color: $color-backgraund;
-                        border-color: #FFD940;
-                        transform: scale(1.05);
+                            }
+                        }
+
+                        .conteiner-social {
+                            display: flex;
+                            margin-top: 22px;
+                            font-family: "Ionicons";
+                            font-size: 14px;
+                            line-height: 26px;
+                            text-align: center;
+                            justify-content: center;
+
+                            a {
+                                display: block;
+                                width: 30px;
+                                height: 30px;
+                                margin: 2.5px;
+                                border: 2px solid $color-SocialLogo;
+                                border-radius: 50%;
+                                box-sizing: border-box;
+                                color: $color-SocialLogo;
+                                transition: 0.3s;
+
+                                &:hover {
+                                    transform: scale(1.1);
+                                    background-color: $color-SocialLogo;
+                                    color: $color-backgraund;
+                                }
+                            }
+
+                            .linkedin {
+                                font-family: "Font_Awesome";
+                                text-align: center;
+                            }
+                        }
+
+                        &__characteristic {
+                            margin-top: 23px;
+                            width: 420px;
+                            height: 121px;
+                            font-size: 14px;
+                            line-height: 24px;
+                            letter-spacing: 0.2px;
+                            color: $color-text;
+                            font-family: "Raleway";
+                            text-align: center;
+                        }
+
+                        .decor-line {
+                            margin-top: 15px;
+                            width: 20px;
+                            height: 4px;
+                            background: $color-Gold;
+
+                            &::before,
+                            &::after {
+                                content: "";
+                                display: block;
+                                background: $color-Gold;
+                                width: 10px;
+                                height: 4px;
+                                margin-left: -15px;
+                            }
+
+                            &::after {
+                                margin-top: -4px;
+                                margin-left: 25px;
+                            }
+                        }
+
+                        &__view-buttom {
+                            display: block;
+                            margin-top: 26px;
+                            width: 118px;
+                            height: 22px;
+                            border: 1px solid $color-Gold;
+                            justify-content: center;
+
+                            text-transform: uppercase;
+                            text-align: center;
+                            font-size: 14px;
+                            line-height: 22px;
+                            color: $color-Title;
+                            font-weight: 700;
+                            font-family: "OpenSans-Bold";
+                            transition: 0.3s;
+
+                            &:hover {
+                                background: #FFD940;
+                                color: $color-backgraund;
+                                border-color: #FFD940;
+                                transform: scale(1.05);
+                            }
+                        }
                     }
                 }
             }
         }
-    }
 
-    .nav-team {
-        display: flex;
-        justify-content: center;
-        margin-top: 28px;
+        .control-form {
+            input[value="1"]:checked {
+                &~.container-main {
+                    transform: translateX(0%);
+                    background-color: red;
+                }
 
-        &__button {
-            display: block;
-            padding: 4.8px;
-            margin: 4.5px;
-            margin-bottom: 40px;
-            border: 1px solid $color-Gold;
-            border-radius: 50%;
-            background-color: $color-Gold;
+                &.container-main .container .person-2 {
+                    transform: translateX(-100%);
+                    background-color: red;
+                }
 
-            &:hover,
-            &:active {
-                background-color: $color-backgraund;
+                &.container-main .container .person-3 {
+                    transform: translateX(200%);
+                    background-color: red;
+                }
             }
         }
     }
-
 }
