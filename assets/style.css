@@ -76,24 +76,25 @@ a {
 .main .container .nav-arrow-Left,
 .main .container .nav-arrow-Rigcht {
   border: 0;
-  background: 0;
+  background: none;
   margin: auto 0;
   margin-right: -70px;
   margin-left: 10px;
   width: 60px;
-  height: 60px;
+  height: 200px;
+  border-radius: 50% 0 0 50%;
 }
 
 .main .container .nav-arrow-Left::before,
 .main .container .nav-arrow-Rigcht::before {
   content: "";
-  position: absolute;
-  margin-left: -8px;
-  bottom: 52px;
-  border-top: 3px solid #ffcc00;
-  border-left: 3px solid #ffcc00;
+  display: block;
+  position: relative;
   width: 13px;
   height: 13px;
+  margin: auto;
+  border-top: 3px solid #ffcc00;
+  border-left: 3px solid #ffcc00;
   -webkit-transform: rotate(315deg);
           transform: rotate(315deg);
   -webkit-transition: 0.1s;
@@ -111,12 +112,12 @@ a {
 .main .container .nav-arrow-Rigcht {
   margin-right: 0px;
   margin-left: -60px;
+  border-radius: 0 50% 50% 0;
 }
 
 .main .container .nav-arrow-Rigcht::before {
-  -webkit-transform: rotate(136deg);
-          transform: rotate(136deg);
-  margin-left: -16px;
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
 }
 
 .main .container::before {
